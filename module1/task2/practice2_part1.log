@@ -1,0 +1,2 @@
+ssh-keygen
+ssh-copy-id -i /home/eltex-pg1-v20/.ssh/id_rsa.pub root@172.16.9.194

@@ -1,0 +1,15 @@
+touch eltex-pg1-v20_part.log
+mkdir -p D1/D2/D3
+cd D1/D2
+touch file.txt
+echo "Somethin text" >> file.txt
+ln -s ../file.txt symlink.txt
+ln  ../file.txt hardlink.txt
+ls -i
+mv D1/D2/file.txt D1
+rm -r D2
+find / -type f -size +50M 2>/dev/null > ~/'.log'
+find ~ -type f -mtime -1 2>/dev/null
+which find
+file /usr/bin/find
+file /boot/initrd.img*
