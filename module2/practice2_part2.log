@@ -1,0 +1,8 @@
+journalctl -b | head -n 1
+journalctl -b --since 2025-03-12T19:59:53 --until 2025-03-12T19:59:54.5
+awk '{print    substr(-bash, index(-bash, ))}' /var/log/auth.log | sed 's/\[[0-9]*\]//' | sort -k1
+sudo find /var/log -type f -name auth.log*
+awk '{if ( ~ /:$/) print ; else print }' /var/log/auth.log | sed 's/\[[0-9]*\]//' | sed 's/:$//' | sort | uniq -c | awk '{print    }' | sort -nr
+awk -F: ' == /usr/sbin/nologin {print  , }' /etc/passwd
+sudo dmesg | grep -i kernel
+sudo wc -l /var/log/kern.log
