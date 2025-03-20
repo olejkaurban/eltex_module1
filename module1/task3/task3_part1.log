@@ -1,0 +1,14 @@
+su user1
+ps -eLf
+ps -eLf | awk ' > 1 {print }' | sort -u | wc -l
+top
+vim ~/file_task3.txt
+sleep 600
+jobs
+bg
+jobs
+renice 10 -p 25414
+ps -l -p 25414
+fg %1
+kill -15 25414
+trap - SIGINT SIGQUIT
