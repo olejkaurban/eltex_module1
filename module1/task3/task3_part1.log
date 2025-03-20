@@ -12,3 +12,12 @@ ps -l -p 25414
 fg %1
 kill -15 25414
 trap - SIGINT SIGQUIT
+touch template_task.sh
+./template_task.sh &
+touch observer.sh
+./observer.sh
+crontab -e
+cp template_task.sh task1.sh
+cp template_task.sh task2.sh
+cp observer.sh observer.log scripts.conf task*.sh report_*.log report
+crontab -e
